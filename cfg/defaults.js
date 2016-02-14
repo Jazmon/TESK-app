@@ -12,6 +12,7 @@ const dfltPort = 8000;
 
 /**
  * Get the default modules object for webpack
+ *
  * @return {Object}
  */
 function getDefaultModules() {
@@ -30,7 +31,8 @@ function getDefaultModules() {
       },
       {
         test: /\.sass/,
-        loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&indentedSyntax'
+        loader: 'style-loader!css-loader!sass-loader' +
+                '?outputStyle=expanded&indentedSyntax'
       },
       {
         test: /\.scss/,
