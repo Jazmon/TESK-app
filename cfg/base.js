@@ -6,9 +6,11 @@ let defaultSettings = require('./defaults');
 // Add all foreign plugins you may need into this array
 // @example:
 let npmBase = path.join(__dirname, '../node_modules');
+let additionalPaths = [path.join(npmBase, 'materialize-css')];
 // let additionalPaths = [ path.join(npmBase, 'react-bootstrap') ];
-let additionalPaths = [path.join(npmBase, 'materialize-css'),
-                       path.join(npmBase, 'react-materialize')];
+// let additionalPaths = [path.join(npmBase, 'materialize-css'),
+//                        path.join(npmBase, 'react-materialize')];
+// let additionalPaths = [];
 
 module.exports = {
   additionalPaths: additionalPaths,
