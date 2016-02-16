@@ -16,11 +16,13 @@
 * [flux](https://facebook.github.io/flux/)
 * [webpack](https://webpack.github.io/)
 * [yeoman (generator)](http://yeoman.io/)
-* [react-native](https://facebook.github.io/react-native/)
+
 ### (Maybe)
 * [react-virtualized](https://github.com/bvaughn/react-virtualized "react-virtualized")
+* [react-native](https://facebook.github.io/react-native/)
 
 ## Good links, reads and tutorials
+* [react-materialize documentation](https://react-materialize.github.io/getting-started.html)
 * [overall good video tutorials](https://www.youtube.com/user/learncodeacademy/videos)
 * [React Flux todo-list](https://facebook.github.io/flux/docs/todo-list.html#content)
 * [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)
