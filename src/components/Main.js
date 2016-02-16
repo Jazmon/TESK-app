@@ -1,4 +1,4 @@
-require('normalize.css');
+import 'materialize-css/sass/materialize.scss';
 require('styles/App.scss');
 
 import React from 'react';
