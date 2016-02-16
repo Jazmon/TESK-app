@@ -1,4 +1,3 @@
-import 'materialize-css/sass/materialize.scss';
 require('styles/App.scss');
 
 import React from 'react';
@@ -7,9 +6,6 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import Layout from './pages/Layout';
 import Test from './pages/Test';
 import Login from './pages/Login';
-
-
-import { Button } from 'react-materialize';
 
 class AppComponent extends React.Component {
   render() {
