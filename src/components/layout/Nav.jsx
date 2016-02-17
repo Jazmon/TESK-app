@@ -4,6 +4,12 @@ import AppBar from 'material-ui/lib/app-bar';
 import LeftNav from 'material-ui/lib/left-nav';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 
+const menuItems = [
+  { route: '/', text: 'Home'},
+  { route: '/tournaments', text: 'Tournaments'},
+  { route: '/userInfo', text: 'User Info'},
+]
+
 export default class Nav extends React.Component {
   constructor(props) {
     super(props);
@@ -30,6 +36,7 @@ export default class Nav extends React.Component {
           open={this.state.open}
           docked={false}
           onRequestChange={open => this.setState({open})}
+          menuItems={menuItems}
         >
           <MenuItem>Menu item</MenuItem>
           <MenuItem>ASD</MenuItem>
