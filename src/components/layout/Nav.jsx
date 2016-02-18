@@ -4,11 +4,11 @@ import AppBar from 'material-ui/lib/app-bar';
 import LeftNav from 'material-ui/lib/left-nav';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 
-const menuItems = [
-  { route: '/', text: 'Home'},
-  { route: '/tournaments', text: 'Tournaments'},
-  { route: '/userInfo', text: 'User Info'},
-]
+// const menuItems = [
+//   {route: '/', text: 'Home'},
+//   {route: '/tournaments', text: 'Tournaments'},
+//   {route: '/userInfo', text: 'User Info'},
+// ];
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -16,16 +16,9 @@ export default class Nav extends React.Component {
     this.state = {open: false};
   }
 
-  // handleToggle() {
-  //   this.setState({open: !this.state.open});
-  // }
   handleToggle = () => this.setState({open: !this.state.open});
 
   handleClose = () => this.setState({open: false});
-
-  openSideMenu() {
-    alert('open');
-  }
 
   render() {
     const {location} = this.props;
@@ -36,10 +29,13 @@ export default class Nav extends React.Component {
           open={this.state.open}
           docked={false}
           onRequestChange={open => this.setState({open})}
-          menuItems={menuItems}
         >
-          <MenuItem>Menu item</MenuItem>
-          <MenuItem>ASD</MenuItem>
+          <MenuItem onTouchTap={this.handleClose}>
+            <IndexLink to='/'>Main</IndexLink>
+          </MenuItem>
+          <MenuItem onTouchTap={this.handleClose}>
+            <Link to='login'>Login</Link>
+          </MenuItem>
         </LeftNav>
         <AppBar
           title='Title'

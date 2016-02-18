@@ -10,6 +10,11 @@ export default class Layout extends React.Component {
     return (
       <div>
         <Nav location={location} />
+        <div className='container'>
+
+          {this.props.children}
+
+        </div>
       </div>
     );
   }
