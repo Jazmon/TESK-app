@@ -36,6 +36,9 @@ export default class Nav extends React.Component {
           <MenuItem onTouchTap={this.handleClose}>
             <Link to='login'>Login</Link>
           </MenuItem>
+          <MenuItem onTouchTap={this.handleClose}>
+            <Link to='membercard'>Member Card</Link>
+          </MenuItem>
         </LeftNav>
         <AppBar
           title='Title'
