@@ -22,3 +22,21 @@ body {
   border-width: 1px 0;
   background: #666;
 }
+.container {
+  padding: 14px;
+}
+.layoutPaper {
+  height: auto;
+  min-height: 350px;
+  width: 100%;
+  color: $main-text;
+  text-align: left;
+  display: inline-block;
+}
+.content {
+  padding: 10px;
+}
+.navlink a {
+  text-decoration: none;
+  color: black;
+}
