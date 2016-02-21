@@ -30,11 +30,14 @@ export default class Nav extends React.Component {
           docked={false}
           onRequestChange={open => this.setState({open})}
         >
-          <MenuItem onTouchTap={this.handleClose}>
+          <MenuItem onTouchTap={this.handleClose} className='navlink'>
             <IndexLink to='/'>Main</IndexLink>
           </MenuItem>
-          <MenuItem onTouchTap={this.handleClose}>
+          <MenuItem onTouchTap={this.handleClose} className='navlink'>
             <Link to='login'>Login</Link>
+          </MenuItem>
+          <MenuItem onTouchTap={this.handleClose} className='navlink'>
+            <Link to='membercard'>Member Card</Link>
           </MenuItem>
         </LeftNav>
         <AppBar

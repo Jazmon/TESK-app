@@ -5,7 +5,7 @@ export default class Test extends React.Component {
     const {location} = this.props;
 
     return (
-      <div>
+      <div className='content'>
         <h4>Test</h4>
       </div>
     );
