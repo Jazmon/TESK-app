@@ -21,7 +21,6 @@ export default class Nav extends React.Component {
   handleClose = () => this.setState({open: false});
 
   render() {
-    const {location} = this.props;
 
     return (
       <div>
@@ -30,18 +29,21 @@ export default class Nav extends React.Component {
           docked={false}
           onRequestChange={open => this.setState({open})}
         >
-          <MenuItem onTouchTap={this.handleClose}>
+          <MenuItem onTouchTap={this.handleClose} className='navlink'>
             <IndexLink to='/'>Main</IndexLink>
           </MenuItem>
-          <MenuItem onTouchTap={this.handleClose}>
+          <MenuItem onTouchTap={this.handleClose} className='navlink'>
             <Link to='login'>Login</Link>
           </MenuItem>
           <MenuItem onTouchTap={this.handleClose}>
             <Link to='tournament'>Tournament</Link>
           </MenuItem>
+          <MenuItem onTouchTap={this.handleClose} className='navlink'>
+            <Link to='membercard'>Member Card</Link>
+          </MenuItem>
         </LeftNav>
         <AppBar
-          title='Title'
+          title='TESK'
           iconClassNameRight='muidocs-icon-navigation-expand-more'
           onLeftIconButtonTouchTap={this.handleToggle}>
         </AppBar>
