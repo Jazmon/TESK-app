@@ -5,7 +5,9 @@ export default class Login extends React.Component {
     const {location} = this.props;
 
     return (
-      <h4>Login</h4>
+      <div>
+        <h4>Login</h4>
+      </div>
     );
   }
 }
