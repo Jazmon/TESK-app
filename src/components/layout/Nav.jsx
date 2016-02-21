@@ -21,7 +21,6 @@ export default class Nav extends React.Component {
   handleClose = () => this.setState({open: false});
 
   render() {
-    const {location} = this.props;
 
     return (
       <div>
@@ -41,7 +40,7 @@ export default class Nav extends React.Component {
           </MenuItem>
         </LeftNav>
         <AppBar
-          title='Title'
+          title='TESK'
           iconClassNameRight='muidocs-icon-navigation-expand-more'
           onLeftIconButtonTouchTap={this.handleToggle}>
         </AppBar>

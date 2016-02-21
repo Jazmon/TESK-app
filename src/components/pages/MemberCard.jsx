@@ -1,9 +1,7 @@
 import React from 'react';
-import Paper from 'material-ui/lib/paper';
 
 class MemberCard extends React.Component {
   render() {
-    const {location} = this.props;
     const date = (new Date()).toLocaleDateString('fi-FI');
 
     return (

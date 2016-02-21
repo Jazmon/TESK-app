@@ -4,7 +4,6 @@ import RaisedButton from 'material-ui/lib/raised-button';
 
 class Login extends React.Component {
   render() {
-    const {location} = this.props;
 
     return (
       <div className='content'>
