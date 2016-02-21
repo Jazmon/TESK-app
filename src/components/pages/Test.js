@@ -6,6 +6,6 @@ export default class Test extends React.Component {
 
     return (
       <h4>Test</h4>
-    );
+        );
   }
 }

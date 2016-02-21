@@ -6,6 +6,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import Layout from './pages/Layout';
 import Test from './pages/Test';
 import Login from './pages/Login';
+import Tournament from './pages/Tournament';
 
 class AppComponent extends React.Component {
   render() {
