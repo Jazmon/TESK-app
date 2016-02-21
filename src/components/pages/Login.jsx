@@ -1,13 +1,26 @@
 import React from 'react';
+import TextField from 'material-ui/lib/text-field';
+import RaisedButton from 'material-ui/lib/raised-button';
 
-export default class Login extends React.Component {
+class Login extends React.Component {
   render() {
     const {location} = this.props;
 
     return (
-      <div>
+      <div className='content'>
         <h4>Login</h4>
+        <form>
+          <TextField
+            floatingLabelText='Email'
+            type='email'></TextField>
+          <TextField
+            floatingLabelText='Password'
+            type='password'></TextField>
+          <RaisedButton label='Login' className='loginButton' />
+        </form>
       </div>
     );
   }
 }
+
+export default Login;
