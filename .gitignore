@@ -31,3 +31,5 @@ bower_components/
 
 
 config.js
+
+src/constants/LoginConstants.js

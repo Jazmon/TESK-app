@@ -1,26 +1,45 @@
 import React from 'react';
-import ReactMixin from 'react-mixin';
 import TextField from 'material-ui/lib/text-field';
 import RaisedButton from 'material-ui/lib/raised-button';
+import Auth from '../../services/AuthService';
+import linkState from 'react-link-state';
 
 class Login extends React.Component {
 
-  constructor = () => {
+  constructor() {
+    super();
     this.state = {
       user: '',
       password: ''
     };
-  };
+  }
 
   login = (e) => {
     e.preventDefault();
-    console.log('foo');
 
-    // Auth.login(this.state.user, this.state.password)   .catch((err) =>
-    // console.log('Error logging in', err));
+    Auth.login(this.state.user, this.state.password)
+      .catch((err) => console.error('Error logging in', err));
   };
 
-  render() {
+  // handleUserChange = (user) => this.setState({user});
+  //
+  // handlePasswordChange = (password) => this.setState({password});
+  //
+  // userValueLink = (value) => {
+  //   return {
+  //     value: this.state.email,
+  //     requestChange: this.handleUserChange
+  //   };
+  // };
+  //
+  // passwordValueLink = (value) => {
+  //   return {
+  //     value: this.state.password,
+  //     requestChange: this.handlePasswordChange
+  //   };
+  // };
+
+  render = () => {
     return (
       <div className='content'>
         <h4>Login</h4>
@@ -29,23 +48,25 @@ class Login extends React.Component {
             <TextField
               floatingLabelText='Email'
               type='email'
-              value='Foo@bar.com'></TextField>
+              valueLink={linkState(this, 'user')}
+              ></TextField>
+          </div>
+          <div className='form-group'>
             <TextField
               floatingLabelText='Password'
               type='password'
-              value='foo'></TextField>
+              valueLink={linkState(this, 'password')}
+              ></TextField>
           </div>
           <RaisedButton
             type='button'
-            onTouchTap={this.login}
+            onTouchTap={this.login.bind(this)}
             label='Login'
             className='loginButton'/>
         </form>
       </div>
     );
-  }
+  };
 }
-
-ReactMixin(Login.prototype, React.addons.LinkedStateMixin);
 
 export default Login;
