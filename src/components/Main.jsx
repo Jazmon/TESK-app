@@ -7,6 +7,7 @@ import Layout from './pages/Layout';
 import Test from './pages/Test';
 import Login from './pages/Login';
 import MemberCard from './pages/MemberCard';
+import Events from './pages/Events';
 
 class AppComponent extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class AppComponent extends React.Component {
           <Route path='login' name='login' component={Login}></Route>
           <Route path='membercard' name='membercard'
             component={MemberCard}></Route>
+          <Route path='events' name='events'component={Events}></Route>
         </Route>
       </Router>
     );

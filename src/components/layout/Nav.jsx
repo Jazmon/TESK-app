@@ -38,6 +38,9 @@ export default class Nav extends React.Component {
           <MenuItem onTouchTap={this.handleClose} className='navlink'>
             <Link to='membercard'>Member Card</Link>
           </MenuItem>
+          <MenuItem onTouchTap={this.handleClose} className='navlink'>
+            <Link to='events'>Tapahtumat</Link>
+          </MenuItem>
         </LeftNav>
         <AppBar
           title='TESK'
