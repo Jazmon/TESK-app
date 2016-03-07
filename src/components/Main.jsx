@@ -18,6 +18,8 @@ class AppComponent extends React.Component {
           <Route path='login' name='login' component={Login}></Route>
           <Route path='membercard' name='membercard'
             component={MemberCard}></Route>
+          <Route path='tournament' name='tournament'
+            component={Tournament}></Route>
         </Route>
       </Router>
     );
