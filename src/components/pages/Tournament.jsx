@@ -3,22 +3,25 @@ import RaisedButton from 'material-ui/lib/raised-button';
 import FontIcon from 'material-ui/lib/font-icon';
 import ActionAndroid from 'material-ui/lib/svg-icons/action/android';
 
-class Tournament extends React.Component {
+export default class Tournament extends React.Component {
   render() {
+    const {location} = this.props;
 
     return (
-      <div className='container'>
+      <div>
         <h4>Tournament</h4>
-        <RaisedButton
-          label='Hearthstone tournament'
-          linkButton={true}
-          href=''
-          secondary={true}
-        />
+        <div>
+          <RaisedButton
+            label='HearthstoneTournament'
+            linkButton={true}
+            href=''
+            secondary={true}
+            style={styles.button}
+            icon={<FontIcon className='muidocs-icon-custom-github'/>}
+          />
+        </div>
       </div>
 
     );
   }
 }
-
-export default Tournament;
