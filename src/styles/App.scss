@@ -6,7 +6,8 @@
 $main-text: rgba(0,0,0,0.87);
 body {
   color: #fff;
-  background: #222;
+  // background: ;
+  background: #222 url('../images/background.png') no-repeat;
 }
 .index img {
   margin: 40px auto;
@@ -23,7 +24,7 @@ body {
   background: #666;
 }
 .container {
-  padding: 14px;
+  // padding: 14px;
 }
 .layoutPaper {
   height: auto;
