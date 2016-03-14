@@ -67,6 +67,7 @@
     "node-sass": "^3.4.2"
   },
   "dependencies": {
+    "auth0-js": "^6.8.0",
     "core-js": "^2.0.0",
     "flux": "^2.1.1",
     "jwt-decode": "^1.5.1",

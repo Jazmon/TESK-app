@@ -3,6 +3,7 @@ import TextField from 'material-ui/lib/text-field';
 import RaisedButton from 'material-ui/lib/raised-button';
 import Auth from '../../services/AuthService';
 import linkState from 'react-link-state';
+import Auth0Lock from 'auth0-js';
 
 class Login extends React.Component {
 
@@ -20,6 +21,10 @@ class Login extends React.Component {
     Auth.login(this.state.user, this.state.password)
       .catch((err) => console.error('Error logging in', err));
   };
+
+  componentWillMount() {
+    this.lock = new Auth0Lock('');
+  }
 
   // handleUserChange = (user) => this.setState({user});
   //
