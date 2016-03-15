@@ -11,8 +11,14 @@ export default class Layout extends React.Component {
     return (
       <div className='page'>
         <Nav location={location} children={children}/>
-
-      </div>
+          <div className='container'>
+            <Paper className='layoutPaper' zDepth={1}>
+              <div>
+                {this.props.children}
+              </div>
+            </Paper>
+          </div>
+        </div>
     );
   }
 }
