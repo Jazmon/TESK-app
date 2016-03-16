@@ -29,7 +29,12 @@ let config = Object.assign({}, baseConfig, {
 // Add needed loaders to the defaults here
 config.module.loaders.push({
   test: /\.(js|jsx)$/,
-  loader: 'react-hot!babel-loader',
+  loader: 'babel-loader',
+  query: {
+    presets: ['react', 'es2015', 'stage-0'],
+    plugins: ['react-html-attrs', 'transform-class-properties',
+     'transform-decorators-legacy'],
+  },
   include: [].concat(
     config.additionalPaths,
     [path.join(__dirname, '/../src')]

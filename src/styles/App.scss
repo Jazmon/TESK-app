@@ -1,4 +1,9 @@
 /* Base Application Styles */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+* {
+  font-family: 'Roboto', sans-serif;
+}
+$main-text: rgba(0,0,0,0.87);
 body {
   color: #fff;
   background: #222;
@@ -16,4 +21,25 @@ body {
   border: 1px solid #000;
   border-width: 1px 0;
   background: #666;
+}
+.container {
+  padding: 14px;
+}
+.layoutPaper {
+  height: auto;
+  min-height: 350px;
+  width: 100%;
+  color: $main-text;
+  text-align: left;
+  display: inline-block;
+}
+.content {
+  padding: 10px;
+}
+.navlink a {
+  text-decoration: none;
+  color: black;
+}
+.loginButton {
+  margin-top: 30px;
 }

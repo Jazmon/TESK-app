@@ -27,11 +27,13 @@ const configs = {
 
 /**
  * Build the webpack configuration
+ *
  * @param  {String} wantedEnv The wanted environment
  * @return {Object} Webpack config
  */
 function buildConfig(wantedEnv) {
-  let isValid = wantedEnv && wantedEnv.length > 0 && allowedEnvs.indexOf(wantedEnv) !== -1;
+  let isValid = wantedEnv && wantedEnv.length > 0 &&
+    allowedEnvs.indexOf(wantedEnv) !== -1;
   let validEnv = isValid ? wantedEnv : 'dev';
   return configs[validEnv];
 }
